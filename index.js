@@ -21,7 +21,7 @@ if (min >= 46 && min <= 59) {
 }
 
 let numZero =prompt('Чему равна переменная а?', '');
-if (numZero == 0) {
+if (without == 0) {
   alert( 'Верно!' );
 } 
 else {

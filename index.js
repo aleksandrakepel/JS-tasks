@@ -9,7 +9,7 @@ else {
 let num2 = prompt('Переменная а равна?', '');
 let showPositive = +num2 + 7;
 let showNegative = num2 / 10;
-if (num2 == 0 || num2 == 2) {
+if (num2 === 0 || num2 === 2) {
   alert(showPositive);
 } 
 else {

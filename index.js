@@ -1,38 +1,48 @@
-// Задание 1 (объект чайник)
+// Задание 1 (объект kettle)
 
-let kettle = {
+const kettle = {
   model: "SkyKettle RK-M216S",
   manufacturer: "REDMOND",
-  "date of manufacture": 2021,
-  "best before date": "3 years",
-  "guarantee period": "18 months",
+  dateOfManufacture: 2021,
+  bestBeforeDate: 3,
+  guaranteePeriod: 18,
   color: "white",
-  height: "30 centimeters",
-  capacity: "1,7 liter",
-  condition: {
-    one: "isOn",
-    two: "isOff",
-    three: "output data",
-    four: "clear data",
-  },
-  
-  isOnOff() {
-    console.log(`${this.condition.one}, ${this.condition.two}`);
+  height: 30,
+  capacity: 2,
+  isOn: false,
+  condition: 0,
+
+  turnOn() {
+    console.log(this.isOn);
+
+    console.log(this.condition);
+
+    if (this.isOn) {
+      return;
+    }
+
+    this.isOn = true;
+    this.condition++;
+
+    console.log(this.condition);
   },
 
-  outputThis() {
-    console.log(`${this.condition.three}`);
+  turnOff() {
+    this.isOn = false;
+
+    console.log(this.isOn);
   }, 
 
-  clearеThis() {
-    console.log(`${this.condition.four}`); 
+  getCondition() {
+    console.log(this.condition);
+    
+    return this.condition; 
   }, 
 };
 
-kettle.isOnOff();
-kettle.outputThis();
-kettle.clearеThis();
-console.log(kettle);
+kettle.turnOn();
+kettle.turnOff();
+kettle.getCondition();
 
 
 // Задание 2 (класс Работник)
@@ -75,7 +85,7 @@ console.log(worker2.getCurrentSalary());
 let userInfo = {
   name: "Vasia",
   age: 30,
-  "likes javascript": true,
+  likesJavascript: true,
 };
 
 console.log(userInfo);
